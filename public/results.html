@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our model and results</title>
+    <link rel="stylesheet" href="css/results-styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+    
+    <header class="header">
+
+        <!-- University logo and link to the website -->
+        <a href="https://lapinamk.fi/" target="_blank" class="logo">
+            <img src="img/logo-square.png" alt="logo">
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <a href="/index.html">Home</a>
+            <a href="/about.html#about">About Us</a>
+            <a href="/about.html#team">Our Team</a>
+            <a href="/results.html" class="active">Results</a>
+        </nav>
+    </header>
+
+    <!-- RESULTS page -->
+    <section class="model" id="model">
+        <div class="model-content">
+            <h2 class="heading">Model Description</h2>
+            <p>Our machine learning model is an advanced image recognition system built using a classification algorithm and a neural network. It is designed to classify images into three distinct categories: dry asphalt, wet asphalt, and fresh snow.<br>
+                <br>Due to limited data availability from the company, we incorporated external datasets to enhance the training process and improve the model's accuracy.<br>
+                Dataset used: <a href="https://thu-rsxd.com/rscd/" target="_blank">RSXD Road Surface Condition Dataset</a>.<br>
+        </div>
+    </section>
+
+    <section class="model" id="results">
+        <div class="model-content">
+            <h2 class="heading">Results</h2>
+            <p>
+              Overall we achieved 89% accuracy for the three classes, which is a better result than expected.<br>
+              The model struggled with correctly identifying with dry asphalt, which later turned out to be a problem with the dataset, since it had incorrectly labeled images. This is an area for potential improvement.<br>
+              Below you can see the confusion matrix, the F1 score and the ROC curves.<br>
+            </p>
+            <div class="image-container">
+              <img src="img/confusion_matrix.png" alt="Confusion Matrix" class="confusion-matrix" style="max-width: 30%; height: auto;">
+              <img src="img/f1_score.png" alt="F1 Score" class="f1-score" style="max-width: 30%; height: auto;">
+              <img src="img/roc_curves.png" alt="ROC Curve" class="roc-curve" style="max-width: 30%; height: auto;">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="copyright">© TeamAppelsiini All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
