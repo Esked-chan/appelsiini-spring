@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- FONTS ----- */
+
+@font-face {
+    font-family: merriweather;
+    src: url(../fonts/Merriweather-Bold.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../fonts/Roboto-Bold.ttf);
+    font-weight: 900;
+}
+
+/* ----- MAIN PAGE ELEMENTS STYLES ----- */
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: roboto;
+    overflow: hidden;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    background-image: url("/img/smaller_logo.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 3em;
+    margin: 1em;
+}
+
+.screen {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.bg {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+audio {
+    display: none;
+}
+
+/* ----- RAIN EFFECT AND ANIMATION STYLE----- */
+
+.drop {
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(13,52,58,1), rgba(255,255,255,0.4));
+    animation: fall 0.53s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+/* ----- MAIN MENU STYLE ----- */
+
+.menu {
+    margin-left: 7em;
+    text-transform: uppercase;
+}
+
+.menu h1 {
+    font-size: 5em;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.menu h3 {
+    font-weight: 300;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    letter-spacing: 10px;
+    position: relative;
+}
+
+.menu h3::before,
+.menu h3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    width: 2.5em;
+    height: 3px;
+}
+
+.menu h3::before {
+    left: 0;
+}
+
+.menu h3::after {
+    right: 0;
+}
+
+.menu ul {
+    margin-top: 5em;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 2.25em 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    font-size: 3em;
+}
+
+#sound {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 3em;
+    margin: 1em;
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu li a:hover,
+#sound:hover {
+    color: #dbdbdb;
+}
+
+/* ----- RESPONSIVE ----- */
+
+@media screen and (max-width: 800px ){
+    .menu h1 {
+        font-size: 2em;
+    }
+
+    .menu h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu h1 {
+        letter-spacing: 5px;
+    }
+
+    .menu h3::before,
+    .menu h3::after {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .screen,
+    .bg {
+        height: 35em;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appelsiini</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"> 
+</head>
+
+<body>
+    
+    <!-- An empty section where the rain drops will be appended with JS -->
+    <section class="rain"></section>
+
+    <div class="screen">
+        <i class='bx bxs-volume-mute' id="sound"></i>
+
+        <!-- Lapland UAS logo and link to the website -->
+        <a href="https://lapinamk.fi/" class="logo" target="_blank"></a>
+
+        <div class="bg" style="background-image: url(img/background_image_main.png);"></div>
+
+        <!-- Sound effects for rain, button click and button/link hover -->
+        <audio autoplay loop id="audioRain">
+            <source src="audio/rain-and-thunder-sfx-12820.mp3" type="audio/mp3" />
+        </audio>
+
+        <audio id="audioClick">
+            <source src="audio/ui-and-menu-sounds-sleek-and-modern-demo-310501.mp3" type="audio/mp3" />
+        </audio>
+
+        <audio id="audioHover">
+            <source src="audio/hover.mp3" type="audio/mp3" />
+        </audio>   
+        
+        <!-- Main menu links -->
+        <div class="menu">
+            <h1>Project: ML and AI</h1>
+            <h3>Team Appelsiini</h3>
+            <ul>
+                <li><a href="/about.html#about">About</a></li>
+                <li><a href="/about.html#team">Our Team</a></li>
+                <li><a href="#">Results</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="js/rain.js"></script>
+    <script src="js/app.js"></script> 
+</body>
+
+</html>
